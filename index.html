@@ -2,15 +2,15 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Dentar Prapasta - Praktikum AR.js</title>
+    <title>Dentar Prapasta-Praktikum AR.js</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/ar.js@3.3.2/aframe/build/aframe-ar.min.js"></script>
+    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
 </head>
 <body style="margin: 0; overflow: hidden;">
     <a-scene embedded arjs>
-        <!-- Marker AR (preset hiro) -->
+        <!-- Menggunakan a-marker sehingga objek berada relatif terhadap marker -->
         <a-marker preset="hiro">
-            <!-- Objek model pesawat 3D -->
             <a-entity 
                 gltf-model="https://github.com/ratned/praktikum-arjs/blob/main/M939%20Truck.glb"
                 scale="0.5 0.5 0.5"
@@ -18,7 +18,7 @@
                 rotation="0 0 0">
             </a-entity>
         </a-marker>
-        <!-- Kamera -->
+        <!-- Entity kamera untuk menampilkan AR -->
         <a-entity camera></a-entity>
     </a-scene>
 </body>
